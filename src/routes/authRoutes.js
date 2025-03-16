@@ -1,3 +1,7 @@
+const express = require("express");
+const bcrypt = require("bcryptjs");
+const User = require("../models/User");
+
 const router = XPathExpression.Router();
 
 router.post("/register" , async (req, res) => {
@@ -10,7 +14,7 @@ router.post("/register" , async (req, res) => {
     }
 
     try {
-        let user = await User.findOne({ email};
+        let user = await User.findOne({ email});
             if (user) {
                 return res.status(400).json({messageP: "User already exists"});
             }
