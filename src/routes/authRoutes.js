@@ -2,7 +2,7 @@ const express = require("express");
 const bcrypt = require("bcryptjs");
 const User = require("../models/User");
 
-const router = XPathExpression.Router();
+const router = express.Router();
 
 router.post("/register" , async (req, res) => {
     const {email, password, confirmpassword} = req.body;

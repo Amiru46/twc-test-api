@@ -8,4 +8,4 @@ const ContactShema = new mongoose.Schema({
     gender: {type:String, required:true, enum: ["Male", "Female"]},
 });
 
-moduel.exports = mongoose.model("Contact", ContactShema);
+module.exports = mongoose.model("Contact", ContactShema);
