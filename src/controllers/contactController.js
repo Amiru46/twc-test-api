@@ -1,9 +1,9 @@
-const Contact = require("../models/contactModel");
+const Contact = require("../models/Contact");
 
 
 exports.createContact = async (req, res) => {
     try {
-      const { name, phone, email, gender } = req.body; // Added gender
+      const { name, phone, email, gender } = req.body;
       const contact = new Contact({ 
         name, 
         phone, 
